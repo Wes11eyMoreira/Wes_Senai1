@@ -40,7 +40,6 @@ def desenhar():
     pygame.draw.rect(janela,"#FF6400",(335,43,200,50))
 
     placar_texto = font.render(f'{placar1} - {placar2}', True, (0,0,0))
-    pontuacao_placar2 = font.render(f'Jogardor 2 marcou ponto',True,(255,255,255))
     janela.blit(placar_texto, (400, 50))
     return pontuacao_placar2
 
@@ -80,8 +79,6 @@ while LOOP:
     
 
     if bola_x == 0:
-        
-        janela.blit(pontuacao_placar2, (500,375))
         placar2 += 1
         velocidade_bola_x = -velocidade_bola_x
         bola_x, bola_y = 500,375
